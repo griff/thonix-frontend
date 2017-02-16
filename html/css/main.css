@@ -1,0 +1,307 @@
+body {
+    font-family: helvetica, sans-serif, arial;
+    color: #111;
+    height: 100%;
+}
+
+body, html {
+    padding: 0;
+    margin:0;
+    font-size: 1em;
+    height: 100%;
+}
+* {-webkit-padding-start: 0px;}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 0.67em 0 0 0;
+}
+h4 {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 0.67em 0;
+}
+h2 {
+    text-align: center;
+    margin: 0;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+}
+
+header .content, header .filler {
+    background-color: white;
+    width: 100%;
+    padding: 0 0.3em;
+    clear: both;
+}
+header .content {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+}
+
+footer .content, footer .filler{
+    background-color: white;
+    width: 100%;
+}
+
+footer .content {
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+}
+
+.filler {
+    position: inherit;
+    visibility: hidden;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select,
+    textarea,
+    input {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-device-width: 480px){
+    body{
+        -webkit-text-size-adjust: none;
+    }
+}
+
+#terminal-container {
+    width: 100%;
+    height: 450px;
+    margin: 0 auto;
+    padding: 2px;
+}
+
+#terminal-container .terminal {
+    background-color: #111;
+    color: #fafafa;
+    padding: 2px;
+}
+
+#terminal-container .terminal:focus .terminal-cursor {
+    background-color: #fafafa;
+}
+
+#vert-scroll {
+    overflow-y: scroll;
+}
+
+h3 {
+    margin-bottom: 0.2em;
+    margin-top: 0;
+}
+#blocks .block.closed h3:before {
+    content: "+";
+    display: inline-block;
+    /*padding-right: 0.5em;*/
+    padding-left: 0.3em;
+    width: 1em;
+}
+#blocks .block.open h3:before {
+    content: "-";
+    display: inline-block;
+    /*padding-right: 0.5em;*/
+    padding-left: 0.3em;
+    width: 1em;
+}
+#blocks {
+    white-space:nowrap;
+    width: 1.5em;
+    overflow-x: visible;
+    float: left;
+    /*border: 1px solid red;*/
+}
+#blocks .line {
+    overflow-x: hidden;
+}
+#blocks h3 {
+    overflow-x: visible;
+    cursor: pointer;
+}
+#messages {
+    overflow-x: scroll;
+    white-space:nowrap;
+    /*border: 1px solid blue;*/
+}
+.block {
+    /*padding-right: 0.5em;*/
+    /*padding-left: 0.5em;*/
+}
+#blocks .line {
+    visibility: hidden;
+}
+#messages .block h3 {
+    cursor: pointer;
+    opacity: 0;
+    /*pointer-events: painted;
+    visibility: hidden;*/
+}
+
+.progress-with-label.label-right .progress {
+    display: inline-block;
+    width: calc(100% - 2.3em);
+    margin-bottom: 0;
+}
+.progress-with-label.label-right span {
+    float: right;
+    display: inline-block;
+    width: 2em;
+}
+.progress-with-label .progress {
+    margin-bottom: 0;
+}
+
+footer {
+    text-align: center;
+}
+
+#boot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 3em);
+}
+
+.with-menu header .content {
+    border-bottom: 2px solid black;
+}
+
+.with-menu header + div {
+    padding-top: 0.7em;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+button.back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.4em 6px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5em;
+}
+
+footer .btn-group-justified .btn {
+    border-radius: 0;
+    min-height: 4em;
+}
+
+.with-menu header + div.drives {
+    padding-top: 2px;
+}
+
+.drives {
+    background-color: grey;
+}
+.drive .drive-info {
+    background-color: white;
+    padding: 6px 1em;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+.drive .drive-attributes {
+    padding: 6px 1em;
+    background-color: white;
+    margin: 0 10px 10px 10px;
+    border-radius: 0 0 4px 4px;
+    border-bottom: 1px solid black;
+}
+.drive .drive-attributes .label {
+    color: black;
+}
+
+.main-menu {
+    font-size: 13px;
+    text-align: center;
+}
+
+/*
+ 1em + 64px = 77
+ 77 * 4 = 308
+ 77 * 5 = 385
+ 77 * 6 = 462
+ 77 * 7 = 539
+ 77 * 8 = 616
+ 77 * 9 = 693
+ 77 * 10 = 770
+ 77 * 11 = 847
+ 77 * 12 = 924
+ 77 * 13 = 1001
+ 77 * 14 = 1078
+ 77 * 15 = 1155
+ 77 * 16 = 1232
+ 77 * 17 = 1309
+ 77 * 18 = 1386
+ 77 * 19 = 1463
+ 77 * 20 = 1540
+ */
+@media screen and (min-width:308px) and (max-width:385px) {  .menu-item-container {  width: 308px;  }  }
+@media screen and (min-width:385px) and (max-width:462px) {  .menu-item-container {  width: 385px;  }  }
+@media screen and (min-width:462px) and (max-width:539px) {  .menu-item-container {  width: 462px;  }  }
+@media screen and (min-width:539px) and (max-width:616px) {  .menu-item-container {  width: 539px;  }  }
+@media screen and (min-width:616px) and (max-width:693px) {  .menu-item-container {  width: 616px;  }  }
+@media screen and (min-width:693px) and (max-width:770px) {  .menu-item-container {  width: 693px;  }  }
+@media screen and (min-width:770px) and (max-width:847px) {  .menu-item-container {  width: 770px;  }  }
+@media screen and (min-width:847px) and (max-width:924px) {  .menu-item-container {  width: 847px;  }  }
+@media screen and (min-width:924px) and (max-width:1001px) {  .menu-item-container {  width: 924px;  }  }
+@media screen and (min-width:1001px) and (max-width:1078px) {  .menu-item-container {  width: 1001px;  }  }
+@media screen and (min-width:1078px) and (max-width:1155px) {  .menu-item-container {  width: 1078px;  }  }
+@media screen and (min-width:1155px) and (max-width:1232px) {  .menu-item-container {  width: 1155px;  }  }
+@media screen and (min-width:1232px) and (max-width:1309px) {  .menu-item-container {  width: 1232px;  }  }
+@media screen and (min-width:1309px) and (max-width:1386px) {  .menu-item-container {  width: 1309px;  }  }
+@media screen and (min-width:1386px) and (max-width:1463px) {  .menu-item-container {  width: 1386px;  }  }
+@media screen and (min-width:1463px) and (max-width:1540px) {  .menu-item-container {  width: 1463px;  }  }
+@media screen and (min-width:1540px) {  .menu-item-container {  width: 1540px;  }  }
+
+.menu-item-container {
+    margin: auto;
+    text-align: left;
+}
+
+button.menu-item {
+    border:none;
+    padding: 2px;
+    height: calc(1em + 64px + 5px);
+    width: calc(1em + 64px);
+    background: transparent;
+}
+.menu-item img {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    margin: 0;
+    height: 64px;
+    width: 64px;
+}
+
+.main-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu-item {
+/*    background: tomato;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px;
+
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    */
+}

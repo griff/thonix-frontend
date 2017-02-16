@@ -1,0 +1,10 @@
+@value corge grault;
+
+.baz {
+    flex: 1;
+    color: corge;
+}
+
+:global .muh {
+    color: red;
+}

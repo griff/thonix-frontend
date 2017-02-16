@@ -1,0 +1,3 @@
+
+dist:
+	boot release

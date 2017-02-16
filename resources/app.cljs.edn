@@ -1,0 +1,4 @@
+{:require  [thonix.main]
+ :compiler-options {:language-in  :ecmascript5
+                    :static-fns true
+                    :asset-path "/app.out"}}

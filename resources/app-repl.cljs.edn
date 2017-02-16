@@ -1,0 +1,4 @@
+{:require  [cljs.user]
+ :init-fns [cljs.user/main]
+ :compiler-options {:language-in  :ecmascript5
+                    :asset-path "/app-repl.out"}}
